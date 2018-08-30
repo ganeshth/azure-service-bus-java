@@ -414,7 +414,7 @@ class MessageAndSessionPump extends InitializableEntity implements IMessageAndSe
             }
             this.waitingRetryThreads++;
             if (this.waitingRetryThreads == this.numberReceivingThreads) {
-                TRACE_LOGGER.info("No messages recevied by any receive call from session '{}'. Closing the session.", this.session.getSessionId());
+                TRACE_LOGGER.info("No messages received by any receive call from session '{}'. Closing the session.", this.session.getSessionId());
                 this.retryFuture.complete(false);
 
                 // close current session and accept another session
