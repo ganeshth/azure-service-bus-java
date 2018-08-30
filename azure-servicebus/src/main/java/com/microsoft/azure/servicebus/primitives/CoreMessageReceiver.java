@@ -1302,7 +1302,7 @@ public class CoreMessageReceiver extends ClientEntity implements IAmqpReceiver, 
 	
 	private void clearAllPendingWorkItems(Exception exception)
 	{
-	    TRACE_LOGGER.info("Completeing all pending receive and updateState operation on the receiver to '{}'", this.receivePath);
+	    TRACE_LOGGER.info("Completing all pending receive and updateState operation on the receiver to '{}'", this.receivePath);
 		final boolean isTransientException = exception == null ||
 				(exception instanceof ServiceBusException && ((ServiceBusException) exception).getIsTransient());
 		
